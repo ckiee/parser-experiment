@@ -1,4 +1,4 @@
-import Token, { AddOpToken, NumberToken, WhitespaceToken } from "./token";
+import Token, { AddOpToken, NumberToken, WhitespaceToken } from "./lexerTokens";
 
 export function error(msg: string) {
     console.error(msg);
@@ -51,7 +51,7 @@ export default class Lexer {
             // lastTypeBefore.end(this);
             // console.log(lastTypeBefore.type, "->", this.lastType.type, `(${this.pos})`);
         // }
-        console.log(this, this.char);
+        // console.log(this, this.char);
         this.pos++;
     }
     processAllData() {
@@ -64,6 +64,6 @@ export default class Lexer {
     }
 }
 
-const lexer = new Lexer("12+11  23");
+const lexer = new Lexer("12+11");
 lexer.processAllData();
 console.log("Output", lexer.tokens)

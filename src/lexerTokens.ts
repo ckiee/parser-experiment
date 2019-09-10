@@ -20,7 +20,7 @@ export const NumberToken = {
     type: TokenType.Number,
     regex: /[0-9.]/,
     end: (lexer, token) => {
-        console.log("NT End", lexer.lastType);
+        // console.log("NT End", lexer.lastType);
         if (token == NumberToken) return;
         if (lexer.last == undefined) throw new Error("Unreachable condition was somehow reached!!!");
         // const oldLastToken = lexer.tokens.pop();
