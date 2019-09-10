@@ -6,6 +6,7 @@
   "author": "RONTheCookie <ronthecookie0101@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "@types/node": "^12.7.4",
     "ts-node": "^8.3.0",
     "typescript": "^3.6.2"
   }
